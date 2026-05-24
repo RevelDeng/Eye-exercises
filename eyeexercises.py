@@ -9,29 +9,20 @@ window.tracer(0) #stops window from updating; must be manually updated; speeds u
 
 #ball
 ball = turtle.Turtle()
-ball.speed(0)
+ball.speed(1)
 ball.shape("circle")
 ball.color("white")
 ball.penup()
-ball_dx = 0.3 #ball movement increments in pixels
-ball_dy = 0.3
-
-#pen
-pen = turtle.Turtle()
-pen.speed(0)
-pen.color("white")
-pen.penup()
-pen.hideturtle()
-pen.goto(0, 260)
-# pen.write("Player A: {0} Player B: {1}".format(score_a, score_b), align = "center", font = ("Courier", 20, "normal"))
+ball_dx = random.random() #ball movement increments in pixels
+ball_dy = random.random()
 
 #Main game loop
 while True:
 	window.update() #updates the screen
 
 	#move the ball
-	ball.setx(ball.xcor() - random.randint(1, 3))
-	ball.sety(ball.ycor() + random.randint(1, 3))
+	ball.setx(ball.xcor() - ball_dx)
+	ball.sety(ball.ycor() + ball_dy)
 
 	#ball border check
 	if ball.ycor() > 288:
