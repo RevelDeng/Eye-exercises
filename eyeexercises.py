@@ -4,7 +4,7 @@ import random
 window = turtle.Screen()
 window.title("Pong by RevelKnievel")
 window.bgcolor("green")
-window.setup(width = 800, height = 600)
+window.setup(width = 1.0, height = 1.0)
 window.tracer(0) #stops window from updating; must be manually updated; speeds up game
 
 #ball
