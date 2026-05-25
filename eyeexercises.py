@@ -23,16 +23,17 @@ while True:
 	
 	#move the ball
 	ball.setx(ball.xcor() - ball_dx)
-	print(ball_dx)
+	print("ball_dx " + str(ball_dx))
 	print("xcor " + str(ball.xcor()))
 	ball.sety(ball.ycor() + ball_dy)
-	print(ball_dy)
+	print("ball_dy " + str(ball_dy))
 	print("ycor " + str(ball.ycor()))
 
 	#ball border check
 	if ball.ycor() > 288:
 		ball.sety(288)
 		ball_dy *= -1
+		break
 
 	if ball.ycor() < -282:
 		ball.sety(-282)
