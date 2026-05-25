@@ -29,20 +29,20 @@ while True:
 	# print("ycor " + str(ball.ycor()))
 
 	#ball border check
-	if ball.ycor() > 288:
-		ball.sety(288)
+	if ball.ycor() > 350:
+		ball.sety(350)
 		ball_dy = random.uniform(0.1, 0.5)
 		ball_dy *= -1
 
-	if ball.ycor() < -282:
-		ball.sety(-282)
+	if ball.ycor() < -350:
+		ball.sety(-350)
 		ball_dy = random.uniform(0.1, 0.5)
 
-	if ball.xcor() > 382:
-		ball.setx(382)
+	if ball.xcor() > 550:
+		ball.setx(550)
 		ball_dx = random.uniform(0.1, 0.5)
 
-	if ball.xcor() < -388:
-		ball.setx(-388)
+	if ball.xcor() < -550:
+		ball.setx(-550)
 		ball_dx = random.uniform(0.1, 0.5)
 		ball_dx *= -1
