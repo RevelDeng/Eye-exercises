@@ -1,5 +1,6 @@
 import turtle #graphics module
 import random
+import time
 
 window = turtle.Screen()
 window.title("Pong by RevelKnievel")
@@ -20,6 +21,10 @@ ball_dy = random.uniform(0.1, 0.5)
 while True:
 	window.update() #updates the screen
 	
+	if time.time() == time.time() + 0.5:
+		ball_dx = random.uniform(0.1, 0.5)
+		ball_dy = random.uniform(0.1, 0.5)
+		
 	#move the ball
 	ball.setx(ball.xcor() - ball_dx)
 	# print("ball_dx " + str(ball_dx))
@@ -33,6 +38,7 @@ while True:
 		ball.sety(350)
 		ball_dy = random.uniform(0.1, 0.5)
 		ball_dy *= -1
+		print (time.time())
 
 	if ball.ycor() < -350:
 		ball.sety(-350)
