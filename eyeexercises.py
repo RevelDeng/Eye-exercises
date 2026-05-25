@@ -21,10 +21,13 @@ ball_dy = random.uniform(0.1, 0.5)
 while True:
 	window.update() #updates the screen
 	
+	#random speed changes
 	if time.time() == time.time() + 0.5:
 		ball_dx = random.uniform(0.1, 0.5)
+
+	if time.time() == time.time() + 0.3:
 		ball_dy = random.uniform(0.1, 0.5)
-		
+
 	#move the ball
 	ball.setx(ball.xcor() - ball_dx)
 	# print("ball_dx " + str(ball_dx))
