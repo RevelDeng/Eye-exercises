@@ -13,8 +13,8 @@ ball.speed(0)
 ball.shape("circle")
 ball.color("white")
 ball.penup()
-ball_dx = random.uniform(0.1, 0.3) #ball movement increments in pixels
-ball_dy = random.uniform(0.1, 0.3)
+ball_dx = random.uniform(0.1, 0.5) #ball movement increments in pixels
+ball_dy = random.uniform(0.1, 0.5)
 
 #Main game loop
 while True:
@@ -31,22 +31,18 @@ while True:
 	#ball border check
 	if ball.ycor() > 288:
 		ball.sety(288)
-		ball_dy = random.uniform(0.1, 0.3)
+		ball_dy = random.uniform(0.1, 0.5)
 		ball_dy *= -1
-		# print ("YOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO")
-		# break
 
 	if ball.ycor() < -282:
 		ball.sety(-282)
-		ball_dy = random.uniform(0.1, 0.3)
-		# ball_dy *= -1
+		ball_dy = random.uniform(0.1, 0.5)
 
 	if ball.xcor() > 382:
 		ball.setx(382)
-		ball_dx = random.uniform(0.1, 0.3)
-		# ball_dx *= -1
+		ball_dx = random.uniform(0.1, 0.5)
 
 	if ball.xcor() < -388:
 		ball.setx(-388)
-		ball_dx = random.uniform(0.1, 0.3)
+		ball_dx = random.uniform(0.1, 0.5)
 		ball_dx *= -1
