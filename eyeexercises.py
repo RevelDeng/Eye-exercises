@@ -1,7 +1,8 @@
 import turtle #graphics module
 import random
-# import time
-import threading
+import time
+import sched
+# import threading
 
 window = turtle.Screen()
 window.title("Pong by RevelKnievel")
@@ -28,12 +29,15 @@ def balldirection():
 	ball_dx = randomspeed()
 	ball_dy = randomspeed()
 
+s = sched.scheduler(time.time, time.sleep)
+
 #Main loop
 while True:
 	window.update() #updates the screen
 	
 	#random speed changes
-	threading.Timer(5, balldirection()).start()
+	s.enter(10, 1, balldirection())
+	# s.run()
 	# if time.time() == time.time() + 0.5:
 	# 	ball_dx = randomspeed()
 	# 	print ("ball dx " + str(ball_dx))
